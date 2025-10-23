@@ -23,11 +23,13 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
+// props
 type MenuItemsProps ={ 
     showCreateDrop: boolean;
     toggleCreateDrop: () => void;
 }
 
+// MenuItems component
 const MenuItems: React.FC<MenuItemsProps> = ({ showCreateDrop, toggleCreateDrop }) => {
     const navigate = useNavigate();
 

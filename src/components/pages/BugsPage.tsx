@@ -13,7 +13,7 @@ import './style.css';
 const BugsPage: React.FC = () => {
     return (
         <div className="demo-page">
-            <h1>Welcome to the Bugs Page</h1>
+            <h2>Welcome to the Bugs Page</h2>
             <h4>This is a demo page for displaying bugs.</h4>
         </div>
     );

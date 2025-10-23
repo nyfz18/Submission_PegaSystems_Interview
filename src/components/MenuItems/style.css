@@ -79,6 +79,7 @@
     background-color: #575757;
 }
 
+/* extra: animations for slidedown  */
 @keyframes slideDown {
     0% {
         opacity: 0;

@@ -13,7 +13,7 @@ import './style.css';
 const EpicsPage: React.FC = () => {
     return (
         <div className="demo-page">
-            <h1>Welcome to the Epics Page</h1>
+            <h2>Welcome to the Epics Page</h2>
             <h4>This is a demo page for displaying epics.</h4>
         </div>
     );

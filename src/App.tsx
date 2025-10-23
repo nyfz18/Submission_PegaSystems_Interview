@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 
 // import components
-import MainMenu from './components/Menu';
+import MainMenu from './components/MainMenu';
 import EpicsPage from './components/pages/EpicsPage';
 import BugsPage from './components/pages/BugsPage';
 import HomePage from './components/pages/HomePage';
