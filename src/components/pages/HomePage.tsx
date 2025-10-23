@@ -13,7 +13,7 @@ import './style.css';
 const HomePage: React.FC = () => {
     return (
         <div className="demo-page">
-            <h1>Welcome to the Home Page</h1>
+            <h2>Welcome to the Home Page</h2>
         </div>
     );
 };
