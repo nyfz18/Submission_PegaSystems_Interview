@@ -47,7 +47,6 @@
     outline: none; 
     font-size: 0.9rem;
     opacity: 0; 
-    transition: opacity 0.3s ease;
 }
 
 .Menu-search-icon {
@@ -57,4 +56,12 @@
     transform: translateY(-50%);
     color: #aaa;
     font-size: 1.5rem;
+    opacity: 1; 
+    transition: none;
+}
+
+.Menu:hover .Menu-search-wrapper input,
+.Menu.expanded .Menu-search-wrapper input,
+.Menu-search-wrapper input:focus {
+    opacity: 1; 
 }
