@@ -1,6 +1,7 @@
 /* styling for the demo pages */
 .demo-page {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
     padding: 2rem;
     background-color: #ffffff;

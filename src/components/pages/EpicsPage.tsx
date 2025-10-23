@@ -14,7 +14,7 @@ const EpicsPage: React.FC = () => {
     return (
         <div className="demo-page">
             <h1>Welcome to the Epics Page</h1>
-            <p>This is a demo page for displaying epics.</p>
+            <h4>This is a demo page for displaying epics.</h4>
         </div>
     );
 };

@@ -13,9 +13,9 @@ import './style.css';
 const CreateDropdown: React.FC = () => {
     return (
         <div className="CreateDropdown">
-            <div className="CreateMenu-item">Bug</div>
-            <div className="CreateMenu-item">Epic</div>
-            <div className="CreateMenu-item">User Story</div>
+            <div className="CreateDrop-item">Bug</div>
+            <div className="CreateDrop-item">Epic</div>
+            <div className="CreateDrop-item">User Story</div>
         </div>
     );
 };

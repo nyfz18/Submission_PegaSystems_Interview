@@ -73,7 +73,7 @@ const Menu: React.FC = () => {
             <div className="Menu-top">
                 <div className="Menu-logo">
                     <img className="Menu-image" src="/pega.png" alt="Pega Logo" />
-                    <span className="Menu-title">Pega Demo</span>
+                    <span className="Menu-title">Demo</span>
                 </div>
 
                 {/* Search Bar */}
@@ -108,17 +108,17 @@ const Menu: React.FC = () => {
                     <span>Home</span>
                 </div>
 
-                <div className="Menu-item" onClick={() => navigate('/')}>
+                <div className="Menu-item">
                     <FontAwesomeIcon className="Menu-icon" icon={faStar} />
                     <span>My Dashboard</span>
                 </div>
 
-                <div className="Menu-item" onClick={() => navigate('/')}>
+                <div className="Menu-item">
                     <FontAwesomeIcon className="Menu-icon" icon={faShapes} />
                     <span>Spaces</span>
                 </div>
 
-                <div className="Menu-item" onClick={() => navigate('/')}>
+                <div className="Menu-item">
                     <FontAwesomeIcon className="Menu-icon" icon={faPaperPlane} />
                     <span>Documents</span>
                 </div>
@@ -134,7 +134,7 @@ const Menu: React.FC = () => {
                     <span>Epics</span>
                 </div>
 
-                <div className="Menu-item" onClick={() => navigate('/')}>
+                <div className="Menu-item">
                     <FontAwesomeIcon className="Menu-icon" icon={faHouse} />
                     <span>Goals</span>
                 </div>
