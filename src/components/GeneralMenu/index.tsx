@@ -63,11 +63,20 @@ const Menu: React.FC = () => {
 // ----------- Render ------------//
 // Main UI//
     return (
-        <div className="Menu"
+        // user accessibility, expand when tabbing
+        <div className={`Menu ${isHovered ? 'expanded' : ''}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => {
                 setIsHovered(false)
                 setShowCreateDrop(false);
+            }}
+            onFocus={() => setIsHovered(true)}
+            onBlur={(e) => {
+                const next = (e.relatedTarget || (document.activeElement as Element))
+                if (!e.currentTarget.contains(next as Node)) {
+                    setIsHovered(false);
+                    setShowCreateDrop(false);
+                }
             }}
         >
             <div className="Menu-top">
@@ -77,7 +86,11 @@ const Menu: React.FC = () => {
                 </div>
 
                 {/* Search Bar */}
-                <div className="Menu-search">
+                <div 
+                    className="Menu-search"
+                    tabIndex={0}
+                    role="button"
+                >  
                     <div className="Menu-search-wrapper">
                         <FontAwesomeIcon className="Menu-search-icon" icon={faMagnifyingGlass} />
                         <input 
@@ -92,41 +105,76 @@ const Menu: React.FC = () => {
             <div className="Menu-separator" />
 
             <div className="Menu-items">
-                <div className="Menu-item" onClick={toggleCreateDrop}>
+                {/* tabbing accessibility  */}
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                    onClick={toggleCreateDrop}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') 
+                        toggleCreateDrop();
+                    }}
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faPlus} />
                     </div>
                     <span>Create</span>
                 </div>
 
-                {showCreateDrop && isHovered && (
-                    <div className="Dropdown">
+                {showCreateDrop && (
+                    <div 
+                        className="Dropdown"
+                        tabIndex={0}
+                        role="button"
+                    >
                         <CreateDropdown />
                     </div>
                 )}
 
-                <div className="Menu-item" onClick={() => navigate('/')}>
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                    onClick={() => navigate('/')}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') 
+                        navigate('/');
+                    }}
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faHouse} />
                     </div>
                     <span>Home</span>
                 </div>
 
-                <div className="Menu-item">
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faStar} />
                     </div>
                     <span>My Dashboard</span>
                 </div>
 
-                <div className="Menu-item">
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faShapes} />
                     </div>
                     <span>Spaces</span>
                 </div>
 
-                <div className="Menu-item">
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faPaperPlane} />
                     </div>
@@ -134,21 +182,43 @@ const Menu: React.FC = () => {
                 </div>
 
 
-                <div className="Menu-item" onClick={() => navigate('/bugs')}>
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                    onClick={() => navigate('/bugs')}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') 
+                        navigate('/bugs');
+                    }}
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faUser} />
                     </div>
                     <span>Bugs</span>
                 </div>
 
-                <div className="Menu-item" onClick={() => navigate('/epics')}>
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                    onClick={() => navigate('/epics')}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') 
+                        navigate('/epics');
+                    }}
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faShapes} />
                     </div>
                     <span>Epics</span>
                 </div>
 
-                <div className="Menu-item">
+                <div 
+                    className="Menu-item"
+                    tabIndex={0}
+                    role="button"
+                >
                     <div className="Menu-icon-wrapper">
                         <FontAwesomeIcon className="Menu-icon" icon={faHouse} />
                     </div>
@@ -158,20 +228,34 @@ const Menu: React.FC = () => {
 
                 {/* bottom section */}
                 <div className="Menu-bottom">
-                    <div className="Menu-separator"></div>
-                    <div className="Menu-item">
+                    <div className="Menu-separator" />
+                    <div 
+                        className="Menu-item"
+                        tabIndex={0}
+                        role="button"
+                    >
                         <div className="Menu-icon-wrapper">
                             <FontAwesomeIcon className="Menu-icon" icon={faBell} />
                         </div>
                         <span>Notifications</span>
                     </div>
-                    <div className="Menu-item">
+
+                    <div 
+                        className="Menu-item"
+                        tabIndex={0}
+                        role="button"
+                    >                        
                         <div className="Menu-icon-wrapper">
                             <FontAwesomeIcon className="Menu-icon" icon={faArrowRotateLeft} />
                         </div>
                         <span>Recents</span>
                     </div>
-                    <div className="Menu-item">
+                    
+                    <div 
+                        className="Menu-item"
+                        tabIndex={0}
+                        role="button"
+                    >  
                         <div className="Menu-icon-wrapper">
                             <FontAwesomeIcon className="Menu-icon" icon={faClipboardCheck} />
                         </div>
@@ -181,16 +265,16 @@ const Menu: React.FC = () => {
                     {/* User profile */}
                     <div className="Menu-user">
                         <img
-                            src="/path/to/user/profile.jpg"
+                            src="../../public/morpeko.jpeg"
                             alt="User"
                             className="Menu-userImage"
                         />
                         <div className="Menu-userInfo">
-                            <span className="Menu-userName">John Doe</span>
+                            <span className="Menu-userName">Nina Zhang</span>
                         </div>
                     </div>
-                </div>
             </div>
+        </div>
         );
     };
     
