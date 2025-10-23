@@ -1,0 +1,10 @@
+/* styling for CreateDropdown component */
+.CreateDrop-item {
+    padding: 0.5rem 1rem; 
+    color: #fff;
+}
+
+/* for when the user hovers over the item  */
+.CreateDrop-item:hover {
+    background-color: #575757;
+}
