@@ -1,0 +1,24 @@
+/* styling for CreateDropdown component */
+.CreateDropdown .CreateDrop-item {
+    padding: 0.75rem 1rem; 
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+}
+
+/* for when the user hovers over the item  */
+.CreateDropdown .CreateDrop-item:hover {
+    background-color: #373636;
+}
+
+.CreateDropdown {
+    display: flex; 
+    flex-direction:column; 
+    gap: 0.5rem;
+    background-color: #494949;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem; 
+}
