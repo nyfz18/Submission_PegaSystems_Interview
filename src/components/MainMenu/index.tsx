@@ -21,6 +21,7 @@ import {
 // import components
 import MenuItems from '../MenuItems';
 import MenuBottom from '../MenuBottom';
+import MenuTop from '../MenuTop';
 
 // Main Component 
 const Menu: React.FC = () => {
@@ -60,37 +61,17 @@ const Menu: React.FC = () => {
                 }
             }}
         >
-            <div className="Menu-top">
-                <div className="Menu-logo">
-                    <img className="Menu-image" src="/pega.png" alt="Pega Logo" />
-                    <span className="Menu-title">Demo</span>
-                </div>
-
-                {/* Search Bar */}
-                <div 
-                    className="Menu-search"
-                    tabIndex={0}
-                    role="button"
-                >  
-                    <div className="Menu-search-wrapper">
-                        <FontAwesomeIcon className="Menu-search-icon" icon={faMagnifyingGlass} />
-                        <input 
-                            type="text"
-                            placeholder="Search..." 
-                        />
-                    </div>
-                </div>
-            </div>
-
+            {/* Main menu  */}
+            <MenuTop />
+            
             {/* Separator for aesthetics */}
             <div className="Menu-separator" />
-
-            {/* Main menu items */}
-                <MenuItems 
-                    showCreateDrop={showCreateDrop} 
-                    toggleCreateDrop={toggleCreateDrop} 
-                />
-                <MenuBottom />
+            
+            <MenuItems 
+                showCreateDrop={showCreateDrop} 
+                toggleCreateDrop={toggleCreateDrop} 
+            />
+            <MenuBottom />
         </div>
         );
     };
