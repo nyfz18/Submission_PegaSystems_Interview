@@ -12,15 +12,9 @@ import {
 // import styles
 import './style.css';
 
-// import FontAwesome icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-    faMagnifyingGlass, 
-} from '@fortawesome/free-solid-svg-icons';
-
 // import components
-import MenuItems from '../MenuItems';
 import MenuBottom from '../MenuBottom';
+import MenuItems from '../MenuItems';
 import MenuTop from '../MenuTop';
 
 // Main Component 
@@ -43,7 +37,7 @@ const Menu: React.FC = () => {
 // ----------- Render ------------//
 // Main UI//
     return (
-        // user accessibility, expand when tabbing
+        // user accessibility, expand when tabbing. functional
         <div className={`Menu ${isHovered ? 'expanded' : ''}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => {
