@@ -21,7 +21,7 @@ import MenuTop from '../MenuTop';
 const Menu: React.FC = () => {
 // ----------- State ------------// 
 
-    // if "create" dropdown is visible
+    // if create dropdown is visible
     const [showCreateDrop, setShowCreateDrop] = useState(false);
     // tracks if menu item is being hovered (for expanding, collapsing)
     const [isHovered, setIsHovered] = useState(false);
@@ -48,6 +48,8 @@ const Menu: React.FC = () => {
             onFocus={() => setIsHovered(true)}
             // else collapse when focus is lost
             onBlur={(e) => {
+                // If relatedTarget is null, fall back to document activeElement. 
+                // If focused element not inside menu, then user has left menu completely (i.e. tab over browser link)
                 const next = (e.relatedTarget || (document.activeElement as Element))
                 if (!e.currentTarget.contains(next as Node)) {
                     setIsHovered(false);
