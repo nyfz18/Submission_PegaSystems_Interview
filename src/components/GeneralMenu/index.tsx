@@ -93,7 +93,9 @@ const Menu: React.FC = () => {
 
             <div className="Menu-items">
                 <div className="Menu-item" onClick={toggleCreateDrop}>
-                    <FontAwesomeIcon className="Menu-icon" icon={faPlus} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faPlus} />
+                    </div>
                     <span>Create</span>
                 </div>
 
@@ -104,38 +106,52 @@ const Menu: React.FC = () => {
                 )}
 
                 <div className="Menu-item" onClick={() => navigate('/')}>
-                    <FontAwesomeIcon className="Menu-icon" icon={faHouse} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faHouse} />
+                    </div>
                     <span>Home</span>
                 </div>
 
                 <div className="Menu-item">
-                    <FontAwesomeIcon className="Menu-icon" icon={faStar} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faStar} />
+                    </div>
                     <span>My Dashboard</span>
                 </div>
 
                 <div className="Menu-item">
-                    <FontAwesomeIcon className="Menu-icon" icon={faShapes} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faShapes} />
+                    </div>
                     <span>Spaces</span>
                 </div>
 
                 <div className="Menu-item">
-                    <FontAwesomeIcon className="Menu-icon" icon={faPaperPlane} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faPaperPlane} />
+                    </div>
                     <span>Documents</span>
                 </div>
 
 
                 <div className="Menu-item" onClick={() => navigate('/bugs')}>
-                    <FontAwesomeIcon className="Menu-icon" icon={faUser} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faUser} />
+                    </div>
                     <span>Bugs</span>
                 </div>
 
                 <div className="Menu-item" onClick={() => navigate('/epics')}>
-                    <FontAwesomeIcon className="Menu-icon" icon={faShapes} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faShapes} />
+                    </div>
                     <span>Epics</span>
                 </div>
 
                 <div className="Menu-item">
-                    <FontAwesomeIcon className="Menu-icon" icon={faHouse} />
+                    <div className="Menu-icon-wrapper">
+                        <FontAwesomeIcon className="Menu-icon" icon={faHouse} />
+                    </div>
                     <span>Goals</span>
                 </div>
             </div>
@@ -144,15 +160,21 @@ const Menu: React.FC = () => {
                 <div className="Menu-bottom">
                     <div className="Menu-separator"></div>
                     <div className="Menu-item">
-                        <FontAwesomeIcon className="Menu-icon" icon={faBell} />
+                        <div className="Menu-icon-wrapper">
+                            <FontAwesomeIcon className="Menu-icon" icon={faBell} />
+                        </div>
                         <span>Notifications</span>
                     </div>
                     <div className="Menu-item">
-                        <FontAwesomeIcon className="Menu-icon" icon={faArrowRotateLeft} />
+                        <div className="Menu-icon-wrapper">
+                            <FontAwesomeIcon className="Menu-icon" icon={faArrowRotateLeft} />
+                        </div>
                         <span>Recents</span>
                     </div>
                     <div className="Menu-item">
-                        <FontAwesomeIcon className="Menu-icon" icon={faClipboardCheck} />
+                        <div className="Menu-icon-wrapper">
+                            <FontAwesomeIcon className="Menu-icon" icon={faClipboardCheck} />
+                        </div>
                         <span>My Applications</span>
                     </div>
     

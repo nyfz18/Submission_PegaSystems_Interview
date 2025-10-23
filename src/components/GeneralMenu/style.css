@@ -74,15 +74,32 @@
     padding: 0.75rem 1rem;
     white-space: nowrap;
     justify-content: flex-start;
+    transition: all 0.3s ease;
+}
+
+.Menu-icon-wrapper {
+    width: 100%;
+    max-width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+    transition: width 0.3s ease;
+}
+
+.Menu:hover .Menu-icon-wrapper {
+    width: auto;
+    justify-content: flex-start;
 }
 
 .Menu-item .Menu-icon {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1.75rem;
     height: 1.75rem;
     color: #aaa;
     min-width: 1.75rem;
-    text-align: center;
 }
 
 .Menu-item:hover {
@@ -100,6 +117,7 @@
     opacity: 1; 
     transform: translateX(0);
 }
+
 
 .Menu-bottom {
     padding-bottom: 1rem;
