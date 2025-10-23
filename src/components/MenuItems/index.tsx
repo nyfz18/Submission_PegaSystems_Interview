@@ -42,7 +42,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ showCreateDrop, toggleCreateDrop 
                 role="button"
                 onClick={toggleCreateDrop}
                 onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') 
+                    if (e.key === 'Enter') 
                     toggleCreateDrop();
                 }}
             >
@@ -68,7 +68,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ showCreateDrop, toggleCreateDrop 
                 role="button"
                 onClick={() => navigate('/')}
                 onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') 
+                    if (e.key === 'Enter') 
                     navigate('/');
                 }}
             >
@@ -118,7 +118,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ showCreateDrop, toggleCreateDrop 
                 role="button"
                 onClick={() => navigate('/bugs')}
                 onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') 
+                    if (e.key === 'Enter') 
                     navigate('/bugs');
                 }}
             >
@@ -134,7 +134,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ showCreateDrop, toggleCreateDrop 
                 role="button"
                 onClick={() => navigate('/epics')}
                 onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') 
+                    if (e.key === 'Enter') 
                     navigate('/epics');
                 }}
             >
