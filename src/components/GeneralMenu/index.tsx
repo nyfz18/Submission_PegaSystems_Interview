@@ -47,13 +47,14 @@ const Menu: React.FC = () => {
     };
 
     useEffect(() => {
-        // handle clicks outside of dropdown to close it
+        // Detects if there are clicks outside the create dropdown. Way of closing create dropdown (user clicking anywhere else on page) 
         const handleClickOutside = (event: MouseEvent) => {
             if (createDropRef.current && !createDropRef.current.contains(event.target as Node)) {
                 setShowCreateDrop(false);
             }
         };
 
+        // Detecting outside clicks with component mounts initially, and then removes it during unmount
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
@@ -70,7 +71,9 @@ const Menu: React.FC = () => {
                 setIsHovered(false)
                 setShowCreateDrop(false);
             }}
+            // when the menu is focused (tabbed to), keep it expanded
             onFocus={() => setIsHovered(true)}
+            // else collapse when focus is lost
             onBlur={(e) => {
                 const next = (e.relatedTarget || (document.activeElement as Element))
                 if (!e.currentTarget.contains(next as Node)) {
