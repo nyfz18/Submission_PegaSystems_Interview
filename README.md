@@ -7,10 +7,11 @@ Front End Engineer position - technical assessment
 - `npm install react-router-dom`
 - `npm install --save @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons` 
 
-**For Viewers**
+**FOR VIEWERS**
 1. clone repo `gh repo clone nyfz18/Submission_PegaSystems_Interview`
+2. `npm install` 
 
-**TO LAUNCH**
+**To launch**
 1. cd into repo 
 2. `npm run dev`
 3. Follow link to localhost
