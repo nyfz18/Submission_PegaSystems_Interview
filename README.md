@@ -10,10 +10,7 @@ Front End Engineer position - technical assessment
 **FOR VIEWERS**
 1. clone repo `gh repo clone nyfz18/Submission_PegaSystems_Interview`
 2. `npm install` 
-
-**To launch**
-1. cd into repo 
-2. `npm run dev`
+3. `npm run dev`
 3. Follow link to localhost
 
 *Note*: the project is within the `client` side of a full stack application. There is no main client folder, but this is all front-end development.  
