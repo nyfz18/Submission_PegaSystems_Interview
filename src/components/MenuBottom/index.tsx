@@ -13,9 +13,11 @@ import {
     faClipboardCheck, 
 } from '@fortawesome/free-solid-svg-icons';
 
+// bottom menu component
 const MenuBottom: React.FC = () => {
     return (
         <div className="Menu-bottom">
+            {/* tabbing accessibility for the following additional items */}
             <div className="Menu-separator" />
             <div 
                 className="Menu-item"
@@ -51,7 +53,11 @@ const MenuBottom: React.FC = () => {
             </div>
 
             {/* User profile */}
-            <div className="Menu-user">
+            <div 
+                className="Menu-user"
+                tabIndex={0}
+                role="button"
+            >  
                 <img
                     src="../../public/morpeko.jpeg"
                     alt="User"
