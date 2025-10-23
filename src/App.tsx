@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 
 // import components
-import GeneralMenu from './components/GeneralMenu';
+import MainMenu from './components/Menu';
 import EpicsPage from './components/pages/EpicsPage';
 import BugsPage from './components/pages/BugsPage';
 import HomePage from './components/pages/HomePage';
@@ -17,7 +17,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <GeneralMenu />
+      <MainMenu />
       <div className="App-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
