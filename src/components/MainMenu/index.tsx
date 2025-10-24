@@ -28,9 +28,8 @@ const Menu: React.FC = () => {
 
 // ----------- Handlers ------------//
 
-    // toggle create dropdown visibility
+    // flips the current state value set by the state
     const toggleCreateDrop = () => {
-        // setShowCreateDrop(prev => !prev);
         setShowCreateDrop(!showCreateDrop);
     };
 
@@ -39,6 +38,7 @@ const Menu: React.FC = () => {
     return (
         // user accessibility, expand when tabbing. functional
         <div className={`Menu ${isHovered ? 'expanded' : ''}`}
+            // expand/collapse menu on hover
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => {
                 setIsHovered(false)
